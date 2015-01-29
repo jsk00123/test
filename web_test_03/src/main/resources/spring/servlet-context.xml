@@ -23,6 +23,4 @@
 	
 	<context:component-scan base-package="net.hwanee.www" />
 	
-	
-	
 </beans:beans>

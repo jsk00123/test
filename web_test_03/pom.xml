@@ -149,7 +149,19 @@
             <artifactId>cglib-nodep</artifactId>
             <version>2.2</version>
         </dependency>
-
+		
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.efsavage.jquery</groupId>
+			<artifactId>jquery-maven</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		
 		
 	<!-- 
 		<dependency>

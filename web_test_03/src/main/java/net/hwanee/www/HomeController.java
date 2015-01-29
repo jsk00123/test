@@ -48,7 +48,7 @@ public class HomeController {
 		paramMap.put("pageRow", "10");
 		paramMap.put("StartPage", String.valueOf((Integer.parseInt(paramMap.get("pageNo"))-1)*Integer.parseInt(paramMap.get("pageRow"))));
 		
-		model.addAttribute("testdb", testServices.getList(paramMap));
+		//model.addAttribute("testdb", testServices.getList(paramMap));
 		
 		return "home";
 	}

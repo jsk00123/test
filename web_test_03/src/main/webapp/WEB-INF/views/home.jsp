@@ -3,7 +3,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"   pageEncoding="UTF-8"%>
 <html>
 <head>
+	
+	<meta http-equiv="Content-Type" content="text/html,js; charset=UTF-8">
 	<title>Home</title>
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="resources/css/ui.jqgrid.css" />
+	<script src="resources/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="resources/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+	<script src="resources/js/jquery.jqGrid.src.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready((function(){
+			$('#list').jqGrid({
+				datatype:"local",
+				height:250,
+				colNames:['col1','col2'],
+				colModel:[
+				          {name:'col1',index:'col1'},
+				          {name:'col2',index:'col2'},
+				],
+				caption:"test"
+			});
+		})
+		)
+	</script>
+	
 </head>
 <body>
 <h1>
@@ -13,6 +38,8 @@
 <P>  The time on the server is ${serverTime}. </P>
 
 <P>  The test on the database is ${testdb}. </P>
+
+<table id ="list"></table>
 
 </body>
 </html>
