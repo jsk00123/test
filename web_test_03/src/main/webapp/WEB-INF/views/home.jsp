@@ -22,15 +22,25 @@
 	<script type="text/javascript">
 		$(window.document).ready(function(){
 			$('#list').jqGrid({
-				datatype:"local",
-				height:250,
-				colNames:['col1','col2'],
+				url:'/boardlist',
+				datatype:"json",
+				colNames:['번호','제목','작성자','수정날짜','조회수'],
 				colModel:[
-				          {name:'col1',index:'col1'},
-				          {name:'col2',index:'col2'},
+				          {name:'num',index:'col1'},
+				          {name:'title',index:'col2'},
+				          {name:'writer',index:'col2'},
+				          {name:'regdate',index:'col2'},
+				          {name:'count',index:'col2'}
 				],
-				caption:"test"
+				caption:"test",
+				rowNum:10,
+				rowList:[10,20,30],
+				pager:'#pager',
+				sortname:'num',
+				viewrecords:true,
+				sortorder:"desc",
 			})
+			jQuery("#list").jqGrid('navGrid','#pager',{edit:false,add:false,del:false});
 		})
 	</script>
 	
@@ -45,6 +55,7 @@
 <P>  The test on the database is ${testdb}. </P>
 
 <table id ="list"></table>
+<div id="pager"></div>
 
 </body>
 </html>

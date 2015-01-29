@@ -4,7 +4,7 @@
 
 <mapper namespace="test">
 
-	<select id="boardList" parameterType="Map" resultType="HashMap">
+	<select id="boardList" resultType="net.hwanee.www.bean.Board">
 		SELECT
 			*
 		FROM

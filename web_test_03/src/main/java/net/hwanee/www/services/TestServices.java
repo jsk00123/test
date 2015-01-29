@@ -35,9 +35,9 @@ public class TestServices {
 			@RequestParam(value="sord", required=false, defaultValue="sort") String sord
 			) throws Exception{
 		
-		List<Board> bd = sqlSession.selectList("test.boadList");
+		List<Board> bd = sqlSession.selectList("test.boardList");
 		
-		Page<Board> obj = null;   
+		Page<Board> obj = new Page<Board> ();   
 	    obj.setRows(bd);  // list<map>형태의 받아온 데이터를 가공해서 셋하고 리턴
 	    return obj;
 	}
