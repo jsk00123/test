@@ -26,11 +26,11 @@
 				datatype:"json",
 				colNames:['번호','제목','작성자','수정날짜','조회수'],
 				colModel:[
-				          {name:'num',index:'col1'},
+				          {name:'idx',index:'col1'},
 				          {name:'title',index:'col2'},
-				          {name:'writer',index:'col2'},
-				          {name:'regdate',index:'col2'},
-				          {name:'count',index:'col2'}
+				          {name:'writer',index:'col3'},
+				          {name:'regdate',index:'col4'},
+				          {name:'count',index:'col5'}
 				],
 				caption:"test",
 				rowNum:10,

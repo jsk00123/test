@@ -4,18 +4,18 @@ import java.util.Date;
 
 public class Board {
 
-	private int num;
+	private int idx;
 	private String title;
 	private String writer;
-	private Date regDate;
+	private Date regdate;
 	private int count;
 	private String content;
 	
-	public int getNum() {
-		return num;
+	public int getIdx() {
+		return idx;
 	}
-	public void setNum(int num) {
-		this.num = num;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	public String getTitle() {
 		return title;
@@ -29,11 +29,11 @@ public class Board {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public Date getRegDate() {
-		return regDate;
+	public Date getRegdate() {
+		return regdate;
 	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
 	}
 	public int getCount() {
 		return count;

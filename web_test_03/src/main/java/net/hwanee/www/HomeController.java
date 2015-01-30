@@ -1,5 +1,6 @@
 package net.hwanee.www;
 
+import java.security.Principal;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,4 +55,27 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/tns")
+	public String tns(Locale locale, Model model, Principal principal) throws Throwable{
+		String name = principal.getName();
+		if(name != null){
+			model.addAttribute("username",name);
+		}
+		return "tns"; 
+	}
+	
+	@RequestMapping(value="/tns/login")
+	public void login(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+		
+	}
+	
+	@RequestMapping(value="/loginFail")
+	public void loginFail(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+		
+	}
+	
+	@RequestMapping(value="/logout")
+	public void logout(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+		
+	}
 }
