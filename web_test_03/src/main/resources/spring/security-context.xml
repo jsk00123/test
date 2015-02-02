@@ -9,7 +9,7 @@
 
 	<security:http auto-config="true">
 		<security:intercept-url pattern="/tns" access="ROLE_USER" />
-		<security:form-login login-page="/tns/login" default-target-url="/tns"
+		<security:form-login login-page="/login" default-target-url="/tns"
 			authentication-failure-url="/loginFail" />
 		<security:logout logout-success-url="/logout" />
 	</security:http>

@@ -52,12 +52,12 @@
               </ul>
             </li>
           </ul>
-          <form action="/tns/login" class="navbar-form navbar-right">
+          <form action="j_spring_security_check" class="navbar-form navbar-right" method="post">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input name="j_username" type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input name="j_password" type="password" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>

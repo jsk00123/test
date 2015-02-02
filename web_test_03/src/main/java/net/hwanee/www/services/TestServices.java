@@ -1,9 +1,6 @@
 package net.hwanee.www.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
 
 import net.hwanee.www.bean.Board;
 import net.hwanee.www.bean.Page;
@@ -13,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -24,7 +20,6 @@ public class TestServices {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@SuppressWarnings("null")
 	@RequestMapping(value = "/boardlist")
 	public 
 	@ResponseBody

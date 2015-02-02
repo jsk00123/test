@@ -6,10 +6,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.inject.Inject;
-
-import net.hwanee.www.services.TestServices;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -31,8 +27,6 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	
-	@Inject
-	private TestServices testServices;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(@RequestParam Map<String, String> paramMap,
@@ -57,14 +51,16 @@ public class HomeController {
 	
 	@RequestMapping(value="/tns")
 	public String tns(Locale locale, Model model, Principal principal) throws Throwable{
-		String name = principal.getName();
-		if(name != null){
+		/*
+		String name = null;
+		if((name = principal.getName()) != null){
 			model.addAttribute("username",name);
 		}
-		return "tns"; 
+		*/
+		return "tns";
 	}
 	
-	@RequestMapping(value="/tns/login")
+	@RequestMapping(value="/login")
 	public void login(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 		
 	}

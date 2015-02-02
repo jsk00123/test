@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-아이디와 패스워드가 일치 하지 않습니다.
+${username} ${password} 아이디와 패스워드가 일치 하지 않습니다.
 </body>
 </html>
