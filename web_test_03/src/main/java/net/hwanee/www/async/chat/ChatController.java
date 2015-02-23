@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.async.DeferredResult;
 
 @Controller
-@RequestMapping("/mvc/chat")
+@RequestMapping("/chat")
 public class ChatController {
 
 	private final ChatRepository chatRepository;

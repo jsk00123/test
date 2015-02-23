@@ -74,4 +74,5 @@ public class HomeController {
 	public void logout(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 		
 	}
+	
 }
